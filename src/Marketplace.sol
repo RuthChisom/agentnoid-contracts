@@ -38,7 +38,9 @@ contract Marketplace is Ownable {
         }
 
         // distribute co-creator shares if any
-        ModelNFT.Model memory m = modelNFT.models(modelId);
+        // ModelNFT.Model memory m = modelNFT.models(modelId);
+        ModelNFT.Model memory m = modelNFT.getModel(modelId);
+
         for (uint i = 0; i < m.coCreators.length; i++) {
             uint share = (remaining * m.coShares[i]) / 10000;
             if (share > 0) {

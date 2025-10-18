@@ -6,7 +6,7 @@ import "../src/ModelNFT.sol";
 import "../src/ImageNFT.sol";
 import "../src/Marketplace.sol";
 
-contract Deploy is Script {
+contract DeployScript is Script {
     function run() external {
         vm.startBroadcast();
 

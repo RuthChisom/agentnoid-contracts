@@ -44,4 +44,9 @@ contract ModelNFT is ERC721, ERC2981, Ownable {
     function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, ERC2981) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
+
+    function getModel(uint256 modelId) external view returns (Model memory) {
+    return models[modelId];
+}
+
 }

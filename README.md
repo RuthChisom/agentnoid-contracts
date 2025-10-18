@@ -68,3 +68,11 @@ $ cast --help
 ```
 forge install OpenZeppelin/openzeppelin-contracts --no-commit
 ```
+forge script script/Deploy.s.sol:DeployScript --rpc-url "$BASE_SEPOLIA_RPC_URL"  --broadcast --private-key "$PRIVATE_KEY" --verify
+
+```
+
+ModelNFT deployed at: 0xdFB2Dcb29dfDBD31b78f7f2f97046Ab1DAcecDA7
+ImageNFT deployed at: 0xa0658eB59f1171a7Bd06FBA2aD598952EAc79764
+Marketplace deployed at: 0x6C705a4a29061F6fcDD1D2D87339c983DeC11CAa
+```
