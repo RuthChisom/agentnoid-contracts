@@ -16,7 +16,7 @@ contract Marketplace is Ownable {
 
     event ImagePurchased(uint256 modelId, uint256 imageId, address buyer, string imageCID, uint256 amount);
 
-    constructor(address _modelNFT, address _imageNFT, address _treasury) {
+    constructor(address _modelNFT, address _imageNFT, address _treasury)  Ownable(msg.sender) {
         modelNFT = ModelNFT(_modelNFT);
         imageNFT = ImageNFT(_imageNFT);
         treasury = _treasury;

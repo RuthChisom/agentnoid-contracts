@@ -10,7 +10,8 @@ contract ImageNFT is ERC721, Ownable {
 
     event ImageMinted(uint256 indexed id, address indexed owner, string ipfsCID);
 
-    constructor() ERC721("ImageNFT", "IMG") {}
+    constructor() ERC721("ImageNFT", "IMG") Ownable(msg.sender) {}
+
 
     function mintImage(address to, string calldata ipfsCID) external returns (uint256) {
         uint256 id = ++nextId;

@@ -17,7 +17,8 @@ contract ModelNFT is ERC721, ERC2981, Ownable {
 
     event ModelMinted(uint256 indexed id, address indexed creator, string ipfsCID);
 
-    constructor() ERC721("ModelNFT", "MODEL") {}
+    constructor() ERC721("ModelNFT", "MODEL") Ownable(msg.sender) {}
+
 
     function mintModel(
         address to,

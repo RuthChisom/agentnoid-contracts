@@ -15,5 +15,9 @@ contract Deploy is Script {
         Marketplace market = new Marketplace(address(model), address(image), msg.sender);
 
         vm.stopBroadcast();
+
+        console.log("ModelNFT deployed at:", address(model));
+        console.log("ImageNFT deployed at:", address(image));
+        console.log("Marketplace deployed at:", address(market));
     }
 }
